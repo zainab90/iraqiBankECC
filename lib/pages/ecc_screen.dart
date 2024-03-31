@@ -184,33 +184,33 @@ class _ECCState extends State<ECC> {
                 width: MediaQuery.of(context).size.width / 1.8,
                 child: _isQRGenerated
                     ?
-                Screenshot(
-                  controller: controller,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(width: 1),
-                    ),
-                    child: QrImage(
-                      data: _qrData.toString(),
-                      size: MediaQuery.of(context).size.height / 5,
-                    ),
-                  ),
-
-                )
-                // Center(
-                //       child: CustomPaint(
-                //           size: Size(
-                //             MediaQuery.of(context).size.width / 1.7,
-                //             MediaQuery.of(context).size.height / 3.5,
-                //           ),
-                //           painter: QrPainter(
-                //             emptyColor: Colors.white,
-                //             data: _qrData!,
-                //             version: QrVersions.auto,
-                //           ),
-                //         ),
-                //     )
+                // Screenshot(
+                //   controller: controller,
+                //   child: Container(
+                //     decoration: BoxDecoration(
+                //       color: Colors.white,
+                //       border: Border.all(width: 1),
+                //     ),
+                //     child: QrImage(
+                //       data: _qrData.toString(),
+                //       size: MediaQuery.of(context).size.height / 5,
+                //     ),
+                //   ),
+                //
+                // )
+                Center(
+                      child: CustomPaint(
+                          size: Size(
+                            MediaQuery.of(context).size.width / 1.7,
+                            MediaQuery.of(context).size.height / 3.5,
+                          ),
+                          painter: QrPainter(
+                            emptyColor: Colors.white,
+                            data: _qrData!,
+                            version: QrVersions.auto,
+                          ),
+                        ),
+                    )
                     :
                 const Center(
                         child: Text(" اضغظ على زر توليد رمز الاستجابة السريعة ",
